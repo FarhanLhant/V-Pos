@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Font Montserrat -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,550,600,700&display=swap" rel="stylesheet">
+    <title>Login VPOS WEB</title>
+    <style>
+        * {
+            font-family: 'montserrat', sans-serif;
+        }
+
+        .row {
+            background-color: #ffffff;
+        }
+
+        .img-con img{
+            margin-left: 225px;
+            margin-top: 80px;
+        }
+
+        .img-con {
+            margin: 0;
+            padding: 7% 5%;
+            margin-top: -50px;
+        }
+
+        .img-con h1 {
+            font-size: 60px;
+            font-weight: 700;
+            color: #524f4d;
+            margin-left: 100px;
+        }
+
+        .img-con p {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            margin-right: 50px;
+            margin-left: 10px;
+            margin-bottom: -30px;
+            font-size: 20px;
+        }
+
+        .form-con {
+            margin: 0;
+            color: #ffffff;
+            padding: 18.5% 8%;
+            background: linear-gradient(to right, #ec9665, #ec6212);
+            height: 100vh;
+        }
+        .form-con a {
+            color: #ffffff;
+        }
+        form h2 {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        form label {
+            font-weight: 500;
+        }
+
+        form button {
+            color: #df6219;
+        }
+
+        form button:hover {
+            color: #ffffff;
+            background-color: rgb(156, 153, 149);
+        }
+
+        .form-group input {
+            color: #e67947;
+            border: none;
+            border-radius: 20px;
+            opacity: 0.8;
+        }
+
+        .form-group input:focus {
+            box-shadow: 5px 5px 7px rgb(112, 102, 102);
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-8 col-sm-12 col-12 img-con">
+                <h1>Welcome to Virtual Pos Web</h1>
+                <p>Virtual Pos Web merupakan aplikasi berbasis website yang bertujuan untuk memvisualisasi data sebaran berdasarkan data input dengan tampilan map geospatial dalam range regional kantor pos cimahi.</p>
+                <img src="logo.png" alt="" width="50%" >
+            </div>
+            <div class="col-md-4 col-sm-12 col-12 form-con">
+                <form method="post" action="http://localhost/all/semua2/login.php"> 
+                    <div class="login">
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                    
+                        <button type="submit" class="btn btn-light">Login</button>
+                    </div>
+                </form><br>
+                <a href=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

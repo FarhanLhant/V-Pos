@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 17%;
+  transition: width 300ms;
+  z-index: 999999;
+  background: #56ccf2;
+  background: -webkit-linear-gradient(to right, #ed752f, #f29456);
+  background: linear-gradient(to right, #ec6212, #ec9665);
+}
+
+.img{
+
+}
+
+.sidebar-brand img{
+  width: 20;
+  height: 10;
+  margin-left: -120px;
+  margin-top: -50px ;
+  position: absolute;
+}
+
+.sidebar-brand {
+  display: flex;
+  padding: 2rem;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar-brand span {
+  font-weight: 600;
+}
+
+.sidebar-menu {
+  margin-top: 1rem;
+  width: 100%;
+}
+.sidebar-menu ul {
+  list-style: none;
+}
+.sidebar-menu ul li a {
+  color: #fff;
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+.sidebar-menu ul li a:hover {
+  transition: 0.3s;
+  padding: 1rem 1.7rem;
+  background-color: #ffb67b;
+}
+/* .sidebar-menu ul li a i {
+  margin-left: 0.5rem;
+} */
+
+.align {
+  height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+
+
+.navbar-toggler {
+  display: none;
+}
+
+.main-content {
+  height: 100vh;
+  margin-left: 16%;
+  transition: margin-left 200ms;
+  background: #ffe6d7;
+  width: 100%;
+  padding-left: 2cm;
+  padding-right: 8cm;
+}
+.main-mahasiswa {
+  padding-top: 6rem;
+}
+.main-mahasiswa h2 {
+  font-weight: 600;
+  margin-left: 15px;
+  padding-top: 20px;
+} 
+
+.main-mahasiswa input[type="text"] {
+  width: 75%;
+  padding: 6px;
+  margin-top: 8px;
+  margin-left: 65px;
+  font-size: 17px;
+  border: none;
+  border-radius: 4px;
+}
+
+.main-mahasiswa button {
+  margin-left: 15px;
+}
+
+.main-mahasiswa .text-center{
+  /* float: right; */
+  /* margin-right: 16px; */
+  margin-left: 3cm;
+  padding-top: 0.5cm;
+  padding-bottom: 0.5cm;
+}
+
+.card {
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem 0;
+}
+
+.active {
+  background-color: #493b2f;
+}
+.bars {
+  cursor: pointer;
+}
+
+/* responsive */
+#nav-toggle {
+  display: none;
+}
+#nav-toggle:checked + .sidebar {
+  width: 75px;
+}
+#nav-toggle:checked ~ .main-content {
+  margin-left: 75px;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand span:last-child,
+#nav-toggle:checked + .sidebar .sidebar-menu span:last-child {
+  display: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+
+  .sidebar {
+    width: 75px;
+  }
+  .main-content {
+    margin-left: 75px;
+  }
+
+  .sidebar .sidebar-brand span:last-child,
+  .sidebar .sidebar-menu span:last-child {
+    display: none;
+  }
+
+  /* Hover */
+  .sidebar:hover {
+    width: 300px;
+  }
+  .main-content:hover {
+    margin-left: 75px;
+  }
+
+  .sidebar:hover .sidebar-brand span:last-child,
+  .sidebar:hover .sidebar-menu span:last-child {
+    display: block;
+  }
+  .sidebar-menu ul li a {
+    color: #fff;
+    display: block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .main-content:hover {
+    margin-left: 0;
+  }
+  .navbar-toggler {
+    display: inline-block;
+  }
+  .navbar .navbar-brand {
+    display: none;
+  }
+}
+
+
+/*bagian gw */
+.container .row .row100{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(autofit,minmax(300px,1fr));
+}
+
+.container .row .row100 .col
+{
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 20px 0 15px; /* buat ngatur besar formnya */
+  transition: 0.5s;
+}
+
+
+.container .row .row100 .inputBox 
+{
+  position: relative;
+  width: 100%;
+  height: 35px;
+  color: black;
+}
+
+
+.container .row .inputBox input{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border:none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: black;
+  top: -5px;
+}
+
+.container .row .row100 .inputBox .text{
+  position: absolute;
+  top: 0;
+  left: 0px; /*buat posisi tulisan stackholdernya*/
+  line-height: 20px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+  color:rgba(82, 77, 72, 0.75)
+}
+
+.container .row .row100 .inputBox input:focus + .text,
+.container .row .row100 .inputBox input:valid + .text{
+  top: -15px;
+  left: -5px;
+}
+
+.container .row .row100 .inputBox .line{
+  position: absolute;
+  bottom: 0px;
+  left: -25px;
+  display: block;
+  width: 120%;
+  height: 2px; 
+  background-color: black;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.wrapper{
+  background-color: var(--bg-color);
+  border-radius: 10px;   
+  padding-left: 11cm;
+  padding-top: 1cm;
+  box-shadow: rgb(12, 11, 11);
+
+}
+
+/*.container .row .row100 .inputBox input:focus ~ .line, 
+.container .row .row100 .inputBox input:valid ~ .line{
+  height: 15px;
+} buat animasi bar bawahnya*/
+
+input[type="submit"]{
+  border: transparent;
+  padding: 5px 25 px;
+  padding-top: 7px; /*buat posisi tulisan simpannya*/
+  cursor: pointer;
+  outline: none;
+  font-size: 25px;
+  border-radius: 2px;
+  background-color: transparent;
+  color: white;
+  align-items: center;
+}
+
+/*button*/
+.btn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-9 {
+  background-image: linear-gradient(to right, #e16025, #eb7344, #fe7504, #ff6b15);
+  box-shadow: 0 4px 15px 0 rgba(234, 147, 65, 0.75);
+}
+
+.imgProfile{
+  width: 100%;
+  margin-top: 1.25cm;
+  margin-left: 2cm;
+  height: auto; 
+  width: 400px; 
+  max-width: 400px; 
+  max-height: 400px;
+  border-radius:  15px 50px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid black;
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input[type=text], select{
+  width: 100%;
+  padding:12px 20px;
+  margin:8px 0;
+  display:inline-block;
+  border:1px solid #ccc;
+  border-radius:4px;
+  box-sizing:border-box;
+}
